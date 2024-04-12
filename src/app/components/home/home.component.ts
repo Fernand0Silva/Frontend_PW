@@ -22,11 +22,12 @@ export class HomeComponent {
     console.log(" Ver " + this.op + " Nacionais ");
    } */
 
-    nomeProduto: string = "Curso de Angular";
+    nomeProduto: string = "Casa de verão";
     anuncio: string = `O ${this.nomeProduto} está em promoção`;
     idProduto: number = 123;
     precoProduto: number = 2.59;
     promocao: boolean = true;
+    foto:string = 'assets/img/crud.png'
 
     constructor()
     {

@@ -1,14 +1,23 @@
 <div class="row">
   <div class="col">
-        <img class="img-fluid" src="../assets/img/logo_horacio.png" alt="">
+        <img class="img-fluid" src="../assets/img/casa2.jpg" alt="">
       </div>
   <div class="col">
-        <img class="img-fluid" src="../assets/img/crud.png" alt="">
+        <div class="card-body">
+          <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
+           <h5 class="card-title">{{ nomeProduto}}</h5> <br>
+           <p class="card-text">Identificação: {{idProduto}}  </p>
+            <span  class="badga badge-success">Promoção</span>
+            <span *ngIf="promocao" class="badga badge-success">Promoção</span>
+        </div>
+  </div>
+      <div>
+        <!--*ngIf="condition; else elseBlock">Content to render when condition is true.-->
       </div>
+
 
 <!--<div class="row">
 
 </div> -->
-
 
 
