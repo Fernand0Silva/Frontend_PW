@@ -24,7 +24,7 @@ export class HomeComponent {
 
     nomeProduto: string = "Casa de verão";
     anuncio: string = `O ${this.nomeProduto} está em promoção`;
-    idProduto: number = 123;
+    idProduto: number = 3;
     precoProduto: number = 2.59;
     promocao: boolean = true;
     foto:string = 'assets/img/crud.png'

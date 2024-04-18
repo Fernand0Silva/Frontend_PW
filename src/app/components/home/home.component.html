@@ -5,10 +5,17 @@
   <div class="col">
         <div class="card-body">
           <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
-           <h5 class="card-title">{{ nomeProduto}}</h5> <br>
+           <h5 class="card-title"> </h5> <br>
+           {{ nomeProduto | uppercase }}
            <p class="card-text">Identificação: {{idProduto}}  </p>
             <span  class="badga badge-success">Promoção</span>
             <span *ngIf="promocao" class="badga badge-success">Promoção</span>
+        </div>
+        <div class="row">
+          <div class="col">
+              <img src="img-fluid" src="../assts/img/casa.jpg" alt="">
+          </div>
+
         </div>
   </div>
       <div>
