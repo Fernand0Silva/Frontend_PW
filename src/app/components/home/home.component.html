@@ -7,10 +7,15 @@
           <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
            <h5 class="card-title"> </h5> <br>
            {{ nomeProduto | uppercase }}
-           <p class="card-text">Identificação: {{idProduto}}  </p>
+           <p class="card-text">Identificação: {{idProduto | number:'2.0-0'}} <br>
+            Validade: {{dataValidade | date: 'shortDate'}}
+          </p>
             <span  class="badga badge-success">Promoção</span>
             <span *ngIf="promocao" class="badga badge-success">Promoção</span>
+            <a href="#" class="btn btn-primary float-right">{{precoProduto | currency: 'BRL'}}</a>
         </div>
+
+
         <div class="row">
           <div class="col">
               <img src="img-fluid" src="../assts/img/casa.jpg" alt="">
@@ -24,6 +29,18 @@
 
 
 <!--<div class="row">
+
+  table table >
+
+  thead thead > head (
+
+  tr tr > table row linha
+
+  td td > table data
+
+  th th > table head negrito e centraliza
+
+  tbody tbody > corpo
 
 </div> -->
 

@@ -9,6 +9,15 @@ import { ListaProdutosComponent } from './components/produtos/lista-produtos/lis
 import { CadastrarProdutosComponent } from './components/produtos/cadastrar-produtos/cadastrar-produtos.component';
 import { HomeComponent } from './components/home/home.component';
 
+// PIPES: https://angular.io/guide/pipes
+
+import { LOCALE_ID } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +31,14 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+],
+
+
+  //providers: [],
   bootstrap: [AppComponent] // AppComponent ele é chamado  do bootstrap
+
+
 })
 export class AppModule { }
