@@ -30,6 +30,14 @@ export class HomeComponent {
     foto:string = 'assets/img/crud.png'
     dataValidade = '2024-04-18'
 
+    nomeProdut: string = "Casa de verão";
+    anunci: string = `O ${this.nomeProdut} está em promoção`;
+    idProdut: number = 1.;
+    precoProdut: number = 2;
+    promoca: boolean = true;
+    fot:string = 'assets/img/crud.png'
+    dataValidad = '2024-04-18'
+
     constructor()
     {
       //Variaveis de string com concatenação

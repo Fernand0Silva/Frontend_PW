@@ -1,13 +1,22 @@
 <div class="row">
   <div class="col">
         <img class="img-fluid" src="../assets/img/casa2.jpg" alt="">
+        <h5 class="card-title"></h5> <br>
+        {{nomeProdut | uppercase}}
+        <p class="card-text">Identificação: {{idProdut | number:'1.0-0'}}
+         Validade:{{dataValidad | date: 'shortDate'}}
+        </p>
+        <span class="badga badga-success">Promoção</span>
+        <span *ngIf="promoca" class="badga badga-success">Promoção</span>
+        <a href="#" class="btn btn-primary float-right">{{precoProdut | currency: 'BRL'}}</a>
       </div>
+
   <div class="col">
         <div class="card-body">
           <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
            <h5 class="card-title"> </h5> <br>
            {{ nomeProduto | uppercase }}
-           <p class="card-text">Identificação: {{idProduto | number:'2.0-0'}} <br>
+           <p class="card-text">Identificação: {{idProduto | number:'2.0-0'}} <br> 
             Validade: {{dataValidade | date: 'shortDate'}}
           </p>
             <span  class="badga badge-success">Promoção</span>
@@ -20,6 +29,7 @@
         <div class="row">
           <div class="col">
                 <img class="img-fluid" src="../assets/img/casa3.jpg" alt="">
+                <p>t</p>
               </div>
         <!--*ngIf="condition; else elseBlock">Content to render when condition is true.-->
       </div>
