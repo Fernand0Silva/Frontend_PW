@@ -1,62 +1,33 @@
+<h1>Seja bem Vindo ao Curso de Angular!</h1>
+
+<h4 class="text-danger">{{ anuncio}}</h4>
 <div class="row">
   <div class="col">
-        <img class="img-fluid" src="../assets/img/casa2.jpg" alt="">
-        <h5 class="card-title"></h5> <br>
-        {{nomeProdut | uppercase}}
-        <p class="card-text">Identificação: {{idProdut | number:'1.0-0'}}
-         Validade:{{dataValidad | date: 'shortDate'}}
-        </p>
-        <span class="badga badga-success">Promoção</span>
-        <span *ngIf="promoca" class="badga badga-success">Promoção</span>
-        <a href="#" class="btn btn-primary float-right">{{precoProdut | currency: 'BRL'}}</a>
-      </div>
-
+    <app-card-produto
+    [foto]="foto"
+    [nomeProduto]="nomeProduto"
+    [promocao]="promocao"
+    [idProduto]="idProduto"
+    [dataValidade]="dataValidade"
+    [precoProduto]="precoProduto"
+  ></app-card-produto>
+  </div>
   <div class="col">
-        <div class="card-body">
-          <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
-           <h5 class="card-title"> </h5> <br>
-           {{ nomeProduto | uppercase }}
-           <p class="card-text">Identificação: {{idProduto | number:'2.0-0'}} <br>
-            Validade: {{dataValidade | date: 'shortDate'}}
-          </p>
-            <span  class="badga badge-success">Promoção</span>
-            <span *ngIf="promocao" class="badga badge-success">Promoção</span>
-            <a href="#" class="btn btn-primary float-right">{{precoProduto | currency: 'BRL'}}</a>
-        </div>
-      </div>
-  <!--</div>-->
-      <div>
-        <div class="row">
-          <div class="col">
-                <img class="img-fluid" src="../assets/img/casa3.jpg" alt="">
-                <p>Casa de Férias</p>
-              </div>
-        <!--*ngIf="condition; else elseBlock">Content to render when condition is true.-->
-      </div>
-      <div>
-        <div class="row">
-          <div class="col">
-              <img class="img-fluid" src="../assets/img/casa4.jpg" alt="">
-              <p>Casa de Outono</p>
-            </div>
+    <app-card-produto>
+      foto="https://s2.glbimg.com/POQby3wH-uCdqwb7wufczPaBlMY=/620x455/e.glbimg.com/og/ed/f/original/2018/10/24/casa-nasce-uma-estrela-sala.jpg"
+      nomeProduto="Casa de Inverno"
+      [promocao]="false"
+      [idProduto]="7"
+      dataValidade="07-01-2025"
+      [precoProduto]="3500.00"
+    </app-card-produto>
+  </div>
+</div>
 
 
 
 
-<!--<div class="row">
-
-  table table >
-
-  thead thead > head (
-
-  tr tr > table row linha
-
-  td td > table data
-
-  th th > table head negrito e centraliza
-
-  tbody tbody > corpo
-
-</div> -->
 
 
+
+<!--<div class="card"></div>-->
