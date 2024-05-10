@@ -1,30 +1,18 @@
+import { IProduto } from './../../model/IProduto.model';
 import { Component, OnInit } from '@angular/core';
+import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
   selector: 'app-lista-produtos',
   templateUrl: './lista-produtos.component.html',
   styleUrls: ['./lista-produtos.component.css']
 })
-export class ListaProdutosComponent implements OnInit {
+ export class ListaProdutosComponent implements OnInit {
 
-  listaString: string[] = ['Primeiro', 'segundo','Terceiro'];
-  listaNumeros: number[] = [15,15.18,100];
+  listaProdutos: IProduto[] = [];
 
-  objetoModelo = {
-    nome: 'Messi',
-    idade:36,
-    altura: 1.70,
-    atleta:true
-  };
-  listaProdutos: any[] = [
-    { nome: 'Curso Angular', precoProduto: 35.56, validade: '2024-04-25', id:1},
-    {nome: 'Curso de Ionic', precoProduto:50, validade:'2024-04-25', id:2, promocao: true},
-    {id:3, nome:'Curso de Ionic Avançado', precoProduto: 50, validade: '2024-04-25'},
-
-  ];
-
-  constructor() {
-    for (let item of this.listaString)
+  constructor(private produtosService: ProdutosService) {
+    /*for (let item of this.listaStrings)
     {
       console.log(item);
     }
@@ -35,12 +23,16 @@ export class ListaProdutosComponent implements OnInit {
     }
 
     console.log(this.objetoModelo);
-    console.log(this.objetoModelo.nome);
+    console.log(this.objetoModelo.nome);*/
   }
 
   ngOnInit(): void {
-
+    throw new Error('Function not implemented.');
+  }
+  carregarProdutos(): void{
+    this.produtosService.buscarTodos().subscribe((retorno: any) =>{
+      this.listaProdutos = retorno;
+    })
   }
 
-}
- 
+  }
