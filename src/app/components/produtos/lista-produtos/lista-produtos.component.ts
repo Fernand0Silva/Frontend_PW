@@ -27,7 +27,7 @@ import { ProdutosService } from 'src/app/services/produtos.service';
   }
 
   ngOnInit(): void {
-    throw new Error('Function not implemented.');
+    this.carregarProdutos();
   }
   carregarProdutos(): void{
     this.produtosService.buscarTodos().subscribe((retorno: any) =>{
