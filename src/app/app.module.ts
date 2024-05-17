@@ -7,6 +7,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { ListaProdutosComponent } from './components/produtos/lista-produtos/lista-produtos.component';
 import { CadastrarProdutosComponent } from './components/produtos/cadastrar-produtos/cadastrar-produtos.component';
+import { AtualizarProdutoComponent } from './components/produtos/atualizar-produto/atualizar-produto.component';
 import { HomeComponent } from './components/home/home.component';
 
 // PIPES: https://angular.io/guide/pipes
@@ -20,6 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 registerLocaleData(localePt);
 
@@ -31,7 +34,8 @@ registerLocaleData(localePt);
     FooterComponent,
     ListaProdutosComponent,
     CadastrarProdutosComponent,
-    HomeComponent
+    HomeComponent,
+    AtualizarProdutoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ registerLocaleData(localePt);
     SharedModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot()
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
