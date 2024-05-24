@@ -24,17 +24,19 @@
           <button class="btn bt-warning"
                    routerLink="/produtos/atualizar/{{prod.id}}">
             <i class="fa fa-pencil" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-dange ml-2" [swal]="{
+        </button>
+        <button
+           class="btn btn-dange ml-2" [swal]="{
             title: 'ATENÇÃO!!!',
             text:' Deseja realmente excluir o produto:  ' + prod.nome + '?',
             showDenyButton: true,
             denyButtonText: 'Não',
             confirmButtonText: 'Sim, excluir',
             icon: 'warning'
-          }">
+          }"
           (confirm)="deletar(prod)"
-            <i class="fa fa-eraser" aria-hidden="true"></i>
+          >
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
           </button>
         </td>
       </tr>
