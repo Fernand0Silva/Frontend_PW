@@ -1,28 +1,28 @@
 <div class="card">
   <div class="row">
     <div class="col">
-          <img class="img-fluid" src="../assets/img/casa2.jpg" alt="">
+          <img class="img-fluid" src="../../../../assets/img/jarro2.jpg" alt="">
           <h5 class="card-title"></h5> <br>
           {{nomeProduto | uppercase}}
           <p class="card-text">Identificação: {{idProduto | number:'1.0-0'}}
-           Validade:{{dtaValidade | date: 'shortDate'}}
+          <!-- Validade:{{dtaValidade | date: 'shortdate'}}  shortDate-->
           </p>
-          <span class="badga badga-success">Promoção</span>
+          <span class="badga badga-success"></span>
           <span *ngIf="promocao" class="badga badga-success">Promoção</span>
           <a href="#" class="btn btn-primary float-right">{{precoProduto | currency: 'BRL'}}</a>
         </div>
 
-    <div class="col">
+     <div class="col">
           <div class="card-body">
-            <img class="img-fluid" src="../assets/img/casa.jpg" alt="">
+            <img class="" src="" alt="">
              <h5 class="card-title"> </h5> <br>
-             {{ nomeProduto | uppercase }}
-             <p class="card-text">Identificação: {{idProduto | number:'2.0-0'}} <br>
+            <!-- {{ nomeProduto | uppercase }}-->
+            <!-- <p class="">Identificação: {{idProduto | number:'2.0-0'}} <br>
               Validade: {{dtaValidade | date: 'shortDate'}}
             </p>
-              <span  class="badga badge-success">Promoção</span>
+             <span  class="badga badge-success">Promo</span>
               <span *ngIf="promocao" class="badga badge-success">Promoção</span>
-              <a href="#" class="btn btn-primary float-right">{{precoProduto | currency: 'BRL'}}</a>
+              <a href="#" class="btn btn-primary float-right">{{precoProduto | currency: 'BRL'}}</a>-->
           </div>
         </div>
     <!--</div>-->
@@ -33,18 +33,18 @@
                   <p>Casa de Férias</p>
                 </div>-->
           <!--*ngIf="condition; else elseBlock">Content to render when condition is true.-->
-        </div>
-       <!--- <div>
+       <!-- </div>
+        <div>
           <div class="row">
             <div class="col">
                 <img class="img-fluid" src="../assets/img/casa4.jpg" alt="">
                 <p>Casa de Outono</p>
-              </div>-->
+              </div>
 
 
 
 
-  <!--<div class="row">
+  <div class="row">
 
     table table >
 

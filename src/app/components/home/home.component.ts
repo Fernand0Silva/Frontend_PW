@@ -22,21 +22,21 @@ export class HomeComponent {
     console.log(" Ver " + this.op + " Nacionais ");
    } */
 
-    nomeProduto: string = "Casa de verão";
-    anuncio: string = `O ${this.nomeProduto} está em promoção`;
-    idProduto: number = 3.;
-    precoProduto: number = 2.59;
+    nomeProduto: string = "Peças de Argila";//Casa de verão
+    anuncio: string = `O ${this.nomeProduto} estão em promoção`;
+    idProduto: number = 7.;
+    precoProduto: number = 29.99;//2.59
     promocao: boolean = true;
     foto:string = 'assets/img/crud.png'
-    dataValidade = '2024-04-18'
+    dataValidade = '20/10/2024'
 
-    nomeProdut: string = "Casa de verão";
+    /*nomeProdut: string = "Casa de verão";
     anunci: string = `O ${this.nomeProdut} está em promoção`;
     idProdut: number = 1.;
     precoProdut: number = 2;
-    promoca: boolean = true;
+    promoca: boolean = true;//true
     fot:string = 'assets/img/crud.png'
-    dataValidad = '2024-04-18'
+    dataValidad = '2024-04-18'*/
 
     constructor()
     {
